@@ -1,27 +1,23 @@
-var quote = "", author = "";
+const getAnotherQuote = () => {
+  $.ajax({
+    url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+    success: data => {
+      const post = data.shift(); // The data is an array of posts. Grab the first one.
+      $('#quote-title').text("-" + post.title);
+      $('#quote-content').html(post.content);
+      $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + post.content + '" ' + post.title));
+    },
+    cache: false
+  });
+}
 
-function getQuote(e) {
-     $.ajax({
-       type: "GET",
-       url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-       dataType: "jsonp",
-       success: function(data) {
-         var post = data.shift(); // The data is an array of posts. Grab the first one.
-         author = post.title;
-         quote = post.content;
-         $('#quote-title').text("-" + author);
-         $('#quote-content').html(quote);
-        $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-       },
-       cache: true
-     });
-   };
-
-$(document).ready(function() {
-  getQuote();
-  $('#get-another-quote-button').on('click', getQuote);
-  $('#tweet-quote').on('click', function() {
-    quote = quote.slice(3,quote.length-5);
-    window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + quote + '" ' + " -" + author));
+$(document).ready(()=> {
+  getAnotherQuote();
+  $('#get-another-quote-button').on('click', getAnotherQuote);
+  $('#tweet-quote').on('click', ()=> {
+    let quote = $('#quote-content').text();
+    let author = $('#quote-title').text();
+    window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
+     encodeURIComponent('"' + quote + '" ' + " -" + author));
   });
  });
