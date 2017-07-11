@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Railway');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+  color: white;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  background-color: #7F2216;
+}
+
+.huge {
+  font-size: 150px;
+}
+
+.quote {
+  padding: 20px;
+  font-family: Railway;
+  font-size: 30px;
+}
+
+.author {
+  font-size: 20px;
+  text-align: right;
+}
+
+.footer {
+  margin: 20px;
+}
+
+.buttons {
+  width: 450px;
+  margin: auto;
+  display: block;
+
+}
+
+.button {
+  height:38px;
+  border:none;
+  border-radius:3px;
+  color:#fff;
+  background-color: blue;
+  outline:none;
+  font-size:0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top:30px;
+  opacity:1;
+  cursor:pointer;
+  &:hover {
+    opacity:0.9;
+  }
+}
