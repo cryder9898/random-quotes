@@ -1,6 +1,6 @@
 const getAnotherQuote = () => {
   $.ajax({
-    url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+    url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
     success: data => {
       const post = data.shift(); // The data is an array of posts. Grab the first one.
       $('#quote-title').text("-" + post.title);
