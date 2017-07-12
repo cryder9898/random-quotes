@@ -1,58 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Railway');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Glegoo');
 
-* {
+body {
   margin: 0;
   padding: 0;
-  list-style: none;
-  vertical-align: baseline;
+  font-family: arial, sans-serif;
+  font-weight: 400;
+  background-color: #7F2216;
   color: white;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  background-color: #7F2216;
+h1 {
+  font-family: "Fugaz One";
+}
+
+.container-fluid div {
+  display: inline-block;
 }
 
 .huge {
-  font-size: 150px;
+  vertical-align: top;
+  font-size: 3em;
 }
 
 .quote {
-  padding: 20px;
-  font-family: Railway;
-  font-size: 30px;
+  margin-top: 20px;
+  font-family: Glegoo;
+  font-size: 2em;
+}
+
+.quote-container {
+  width: 90%;
 }
 
 .author {
   font-size: 20px;
   text-align: right;
+  display: block;
 }
 
 .footer {
   margin: 20px;
 }
 
-.buttons {
-  width: 450px;
-  margin: auto;
-  display: block;
-
-}
-
-.button {
-  height:38px;
-  border:none;
-  border-radius:3px;
-  color:#fff;
-  background-color: blue;
-  outline:none;
-  font-size:0.85em;
-  padding: 8px 18px 6px 18px;
-  margin-top:30px;
-  opacity:1;
-  cursor:pointer;
-  &:hover {
-    opacity:0.9;
-  }
+.buttons div {
+  display: inline-block;
 }

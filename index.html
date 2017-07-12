@@ -14,27 +14,32 @@
     <title>Random Quote Generator</title>
   </head>
 <body>
-  <div class="container-fluid text-center">
-    <div class="row">
+  <div class="text-center">
+    <div>
       <h1>Random Quote</h1>
     </div>
-    <div class="row">
-      <div class="col-xs-4 text-right">
-        <h1 class="huge">"</h1></div>
-      <div class="col-xs-4">
+    <div class="container-fluid">
+      <div class="huge">"</div>
+      <div class="quote-container">
         <div id="quote-content" class="quote"></div>
         <div id="quote-title" class="author"></div>
       </div>
-      <div class="col-xs-4 text-left">
-        <h1 class="huge">"</h1></div>
+      <div class="huge">"</div>
     </div>
-    <div class="row">
-      <div class="col-xs-6">
-        <a rel="nofollow" rel="noreferrer"id="tweet-quote" class="btn btn-primary" title="Tweet this quote!" target="_blank">
+    <div class="buttons">
+      <div>
+        <a
+          rel="nofollow"
+          rel="noreferrer"
+          id="tweet-quote"
+          class="btn btn-primary"
+          title="Tweet this quote!"
+          target="_blank"
+        >
           <i class="fa fa-twitter"></i>
         </a>
       </div>
-      <div class="col-xs-6">
+      <div>
         <button id="get-another-quote-button" class="btn btn-primary">Random Quote</button>
       </div>
     </div>
